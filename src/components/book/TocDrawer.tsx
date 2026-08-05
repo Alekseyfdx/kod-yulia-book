@@ -36,7 +36,7 @@ export function TocDrawer({ open, onClose, currentId }: Props) {
           <h2 className="mt-1 font-display text-xl font-semibold tracking-tight text-fg">
             Оглавление
           </h2>
-          <p className="mt-1 text-sm text-fg-muted">10 фрагментов · редакция 4.0</p>
+          <p className="mt-1 text-sm text-fg-muted">10 глав · антиутопия</p>
         </div>
         <nav className="flex-1 overflow-y-auto px-3 py-3">
           <ul className="space-y-1">

@@ -9,11 +9,6 @@ import appCss from "../styles.css?url";
 import { BOOK } from "@/data/chapters";
 
 const APP_NAME = BOOK.title;
-const host = import.meta.env.VITE_PUBLIC_HOSTNAME;
-const ogImage = host
-  ? `https://og.grok.me/v1/card.png?host=${encodeURIComponent(host)}&title=${encodeURIComponent(APP_NAME)}`
-  : undefined;
-
 export const Route = createRootRoute({
   head: () => ({
     meta: [
@@ -26,17 +21,8 @@ export const Route = createRootRoute({
         name: "description",
         content: BOOK.subtitle,
       },
-      { title: `${BOOK.title} · ${BOOK.edition}` },
+      { title: BOOK.title },
       { name: "theme-color", content: "#07080c" },
-      ...(ogImage
-        ? [
-            { property: "og:image", content: ogImage },
-            { property: "og:image:width", content: "1200" },
-            { property: "og:image:height", content: "630" },
-            { property: "og:title", content: APP_NAME },
-            { property: "og:description", content: BOOK.subtitle },
-          ]
-        : []),
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },

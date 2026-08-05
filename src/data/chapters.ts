@@ -337,7 +337,7 @@ export const chapters: Chapter[] = [
     phase: "II · трещина",
     subtitle: "Оранжерея. YU-9. Предупреждение.",
     caption: "Оранжерея. YU-9. Предупреждение.",
-    image: "/media/images/scene-eye.jpg",
+    image: "/media/chapters/06.jpg",
     audio: "/media/audio/glava-06.mp3",
     video: "/media/scenes/greenhouse.mp4",
     minutes: 5,
