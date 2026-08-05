@@ -356,6 +356,18 @@
       *{animation:none !important;transition:none !important}
       .js .reveal,.js .tp-title,.js .tp-right{opacity:1 !important;transform:none !important}
     }
+  
+    /* buyer mobile safety */
+    html,body{overflow-x:hidden}
+    .title-page,.tp-left,.tp-right,.boot,.boot-line,.tp-title,.wrap,.container{max-width:100%}
+    .glitch{overflow-wrap:anywhere;word-break:break-word}
+    @media (max-width:600px){
+      .title-page{padding-left:0;padding-right:0}
+      .tp-left,.tp-right{width:100%;max-width:100%;box-sizing:border-box}
+      .glitch{font-size:clamp(2.2rem,12vw,3.4rem)!important}
+      .dossier{max-width:100%!important}
+    }
+
   </style>
 </head>
 <body id="top">

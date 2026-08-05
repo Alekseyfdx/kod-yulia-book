@@ -356,6 +356,18 @@
       *{animation:none !important;transition:none !important}
       .js .reveal,.js .tp-title,.js .tp-right{opacity:1 !important;transform:none !important}
     }
+  
+    /* buyer mobile safety */
+    html,body{overflow-x:hidden}
+    .title-page,.tp-left,.tp-right,.boot,.boot-line,.tp-title,.wrap,.container{max-width:100%}
+    .glitch{overflow-wrap:anywhere;word-break:break-word}
+    @media (max-width:600px){
+      .title-page{padding-left:0;padding-right:0}
+      .tp-left,.tp-right{width:100%;max-width:100%;box-sizing:border-box}
+      .glitch{font-size:clamp(2.2rem,12vw,3.4rem)!important}
+      .dossier{max-width:100%!important}
+    }
+
   </style>
 </head>
 <body id="top">
@@ -409,7 +421,7 @@
           <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
           <span class="scanbar" aria-hidden="true"></span>
           <span class="stamp">проект HELIOS</span>
-          <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/images/cover-kod-yulia.jpg"
+          <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/images/cover-kod-yulia.jpg"
                alt="Обложка романа «Код Юлия»: две версии Юлии стоят друг напротив друга в разрушенной оранжерее под дождём" />
           <figcaption><span>досье · YU-7</span><span class="scan">обложка · 2026</span></figcaption>
         </figure>
@@ -443,7 +455,7 @@
             <span class="track-meta">03:30 · оригинальный трек</span>
           </div>
           <audio controls preload="metadata" aria-label="Код Юля — Песня I">
-            <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/audio/kod-yulya-song-01.mp3" type="audio/mpeg">
+            <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/audio/kod-yulya-song-01.mp3" type="audio/mpeg">
             Ваш браузер не поддерживает воспроизведение MP3.
           </audio>
         </article>
@@ -454,7 +466,7 @@
             <span class="track-meta">03:47 · оригинальный трек</span>
           </div>
           <audio controls preload="metadata" aria-label="Код Юля — Песня II">
-            <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/audio/kod-yulya-song-02.mp3" type="audio/mpeg">
+            <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/audio/kod-yulya-song-02.mp3" type="audio/mpeg">
             Ваш браузер не поддерживает воспроизведение MP3.
           </audio>
         </article>
@@ -491,13 +503,13 @@
       <div class="audio-block reveal">
         <span class="a-label">Слушать главу</span>
         <audio controls preload="metadata" data-chapter="01">
-          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/audio/glava-01.mp3" type="audio/mpeg">
+          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/audio/glava-01.mp3" type="audio/mpeg">
         </audio>
         <p class="audio-fallback" hidden>Не удалось загрузить MP3. Обновите страницу и попробуйте снова.</p>
       </div>
 
       <figure class="scene reveal">
-        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/images/scene-awakening.jpg" alt="Пробуждение · лаборатория HELIOS" loading="lazy" />
+        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/images/scene-awakening.jpg" alt="Пробуждение · лаборатория HELIOS" loading="lazy" />
         <figcaption><span>Пробуждение · лаборатория HELIOS</span><span>кадр · 01/10</span></figcaption>
       </figure>
 
@@ -577,13 +589,13 @@
       <div class="audio-block reveal">
         <span class="a-label">Слушать главу</span>
         <audio controls preload="metadata" data-chapter="02">
-          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/audio/glava-02.mp3" type="audio/mpeg">
+          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/audio/glava-02.mp3" type="audio/mpeg">
         </audio>
         <p class="audio-fallback" hidden>Не удалось загрузить MP3. Обновите страницу и попробуйте снова.</p>
       </div>
 
       <figure class="scene reveal">
-        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/images/ch-02.jpg" alt="Метка · адаптация в теле" loading="lazy" />
+        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/images/ch-02.jpg" alt="Метка · адаптация в теле" loading="lazy" />
         <figcaption><span>Метка · адаптация в теле</span><span>кадр · 02/10</span></figcaption>
       </figure>
 
@@ -641,13 +653,13 @@
       <div class="audio-block reveal">
         <span class="a-label">Слушать главу</span>
         <audio controls preload="metadata" data-chapter="03">
-          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/audio/glava-03.mp3" type="audio/mpeg">
+          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/audio/glava-03.mp3" type="audio/mpeg">
         </audio>
         <p class="audio-fallback" hidden>Не удалось загрузить MP3. Обновите страницу и попробуйте снова.</p>
       </div>
 
       <figure class="scene reveal">
-        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/images/ch-03.jpg" alt="Приманка · клуб «Орбита»" loading="lazy" />
+        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/images/ch-03.jpg" alt="Приманка · клуб «Орбита»" loading="lazy" />
         <figcaption><span>Приманка · клуб «Орбита»</span><span>кадр · 03/10</span></figcaption>
       </figure>
 
@@ -719,13 +731,13 @@
       <div class="audio-block reveal">
         <span class="a-label">Слушать главу</span>
         <audio controls preload="metadata" data-chapter="04">
-          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/audio/glava-04.mp3" type="audio/mpeg">
+          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/audio/glava-04.mp3" type="audio/mpeg">
         </audio>
         <p class="audio-fallback" hidden>Не удалось загрузить MP3. Обновите страницу и попробуйте снова.</p>
       </div>
 
       <figure class="scene reveal">
-        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/images/scene-interface.jpg" alt="Трещина · сектор C · YU-4" loading="lazy" />
+        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/images/scene-interface.jpg" alt="Трещина · сектор C · YU-4" loading="lazy" />
         <figcaption><span>Трещина · сектор C · YU-4</span><span>кадр · 04/10</span></figcaption>
       </figure>
 
@@ -797,13 +809,13 @@
       <div class="audio-block reveal">
         <span class="a-label">Слушать главу</span>
         <audio controls preload="metadata" data-chapter="05">
-          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/audio/glava-05.mp3" type="audio/mpeg">
+          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/audio/glava-05.mp3" type="audio/mpeg">
         </audio>
         <p class="audio-fallback" hidden>Не удалось загрузить MP3. Обновите страницу и попробуйте снова.</p>
       </div>
 
       <figure class="scene reveal">
-        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/images/ch-05.jpg" alt="Оружие · полевое задание" loading="lazy" />
+        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/images/ch-05.jpg" alt="Оружие · полевое задание" loading="lazy" />
         <figcaption><span>Оружие · полевое задание</span><span>кадр · 05/10</span></figcaption>
       </figure>
 
@@ -883,13 +895,13 @@
       <div class="audio-block reveal">
         <span class="a-label">Слушать главу</span>
         <audio controls preload="metadata" data-chapter="06">
-          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/audio/glava-06.mp3" type="audio/mpeg">
+          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/audio/glava-06.mp3" type="audio/mpeg">
         </audio>
         <p class="audio-fallback" hidden>Не удалось загрузить MP3. Обновите страницу и попробуйте снова.</p>
       </div>
 
       <figure class="scene reveal">
-        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/images/scene-eye.jpg" alt="Двойник · оранжерея · YU-9" loading="lazy" />
+        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/images/scene-eye.jpg" alt="Двойник · оранжерея · YU-9" loading="lazy" />
         <figcaption><span>Двойник · оранжерея · YU-9</span><span>кадр · 06/10</span></figcaption>
       </figure>
 
@@ -964,13 +976,13 @@
       <div class="audio-block reveal">
         <span class="a-label">Слушать главу</span>
         <audio controls preload="metadata" data-chapter="07">
-          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/audio/glava-07.mp3" type="audio/mpeg">
+          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/audio/glava-07.mp3" type="audio/mpeg">
         </audio>
         <p class="audio-fallback" hidden>Не удалось загрузить MP3. Обновите страницу и попробуйте снова.</p>
       </div>
 
       <figure class="scene reveal">
-        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/images/ch-07.jpg" alt="Предательство · архив моделей" loading="lazy" />
+        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/images/ch-07.jpg" alt="Предательство · архив моделей" loading="lazy" />
         <figcaption><span>Предательство · архив моделей</span><span>кадр · 07/10</span></figcaption>
       </figure>
 
@@ -1036,13 +1048,13 @@
       <div class="audio-block reveal">
         <span class="a-label">Слушать главу</span>
         <audio controls preload="metadata" data-chapter="08">
-          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/audio/glava-08.mp3" type="audio/mpeg">
+          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/audio/glava-08.mp3" type="audio/mpeg">
         </audio>
         <p class="audio-fallback" hidden>Не удалось загрузить MP3. Обновите страницу и попробуйте снова.</p>
       </div>
 
       <figure class="scene reveal">
-        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/images/scene-break.jpg" alt="Разрыв · одиннадцать минут" loading="lazy" />
+        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/images/scene-break.jpg" alt="Разрыв · одиннадцать минут" loading="lazy" />
         <figcaption><span>Разрыв · одиннадцать минут</span><span>кадр · 08/10</span></figcaption>
       </figure>
 
@@ -1112,13 +1124,13 @@
       <div class="audio-block reveal">
         <span class="a-label">Слушать главу</span>
         <audio controls preload="metadata" data-chapter="09">
-          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/audio/glava-09.mp3" type="audio/mpeg">
+          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/audio/glava-09.mp3" type="audio/mpeg">
         </audio>
         <p class="audio-fallback" hidden>Не удалось загрузить MP3. Обновите страницу и попробуйте снова.</p>
       </div>
 
       <figure class="scene reveal">
-        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/images/ch-09.jpg" alt="Охота · крыши · дождь" loading="lazy" />
+        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/images/ch-09.jpg" alt="Охота · крыши · дождь" loading="lazy" />
         <figcaption><span>Охота · крыши · дождь</span><span>кадр · 09/10</span></figcaption>
       </figure>
 
@@ -1179,13 +1191,13 @@
       <div class="audio-block reveal">
         <span class="a-label">Слушать главу</span>
         <audio controls preload="metadata" data-chapter="10">
-          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/audio/glava-10.mp3" type="audio/mpeg">
+          <source src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/audio/glava-10.mp3" type="audio/mpeg">
         </audio>
         <p class="audio-fallback" hidden>Не удалось загрузить MP3. Обновите страницу и попробуйте снова.</p>
       </div>
 
       <figure class="scene reveal">
-        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@main/site/images/scene-rain.jpg" alt="Человек · перекрёсток" loading="lazy" />
+        <img src="https://cdn.jsdelivr.net/gh/Alekseyfdx/kod-yulia-book@8e37f1e/site/images/scene-rain.jpg" alt="Человек · перекрёсток" loading="lazy" />
         <figcaption><span>Человек · перекрёсток</span><span>кадр · 10/10</span></figcaption>
       </figure>
 
