@@ -22,9 +22,20 @@ function HomePage() {
   const [activeSong, setActiveSong] = useState(0);
 
   useEffect(() => {
-    setPct(getProgressPercent());
-    setLast(getLastChapter());
-    setRead(getReadIds());
+    const refresh = () => {
+      setPct(getProgressPercent());
+      setLast(getLastChapter());
+      setRead(getReadIds());
+    };
+    refresh();
+    window.addEventListener("kod-yulia-progress", refresh);
+    window.addEventListener("storage", refresh);
+    window.addEventListener("focus", refresh);
+    return () => {
+      window.removeEventListener("kod-yulia-progress", refresh);
+      window.removeEventListener("storage", refresh);
+      window.removeEventListener("focus", refresh);
+    };
   }, []);
 
   const continueId = last ?? 1;

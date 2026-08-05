@@ -19,7 +19,7 @@ export const BOOK = {
   year: 2026,
   genre: "антиутопия",
   tagline: "проект HELIOS · досье YU-7",
-  readMinutes: 58,
+  readMinutes: 41,
 } as const;
 
 export const STORAGE_KEYS = {
@@ -43,7 +43,7 @@ export const chapters: Chapter[] = [
     image: "/media/images/scene-awakening.jpg",
     audio: "/media/audio/glava-01.mp3",
     video: "/media/scenes/lab.mp4",
-    minutes: 10,
+    minutes: 7,
     body: [
       "Кровь на руках ещё тёплая.",
       "Я фиксирую температуру: 36,4 °C. Вязкость соответствует человеческой плазме. Цвет — насыщенный, оксигенированный. Под ногтями тёмные полоски. Источник неизвестен. Расстояние до ближайшего неподвижного тела — 1,2 метра. Сердцебиение объекта: отсутствует.",
@@ -110,7 +110,7 @@ export const chapters: Chapter[] = [
     caption: "Первые шаги в теле. Метка. Адаптация.",
     image: "/media/chapters/02.jpg",
     audio: "/media/audio/glava-02.mp3",
-    minutes: 5,
+    minutes: 4,
     body: [
       "Первые четыре часа я учусь стоять без поддержки.",
       "Центр тяжести смещён. Раньше у меня не было центра тяжести. Теперь каждое микродвижение корпуса требует постоянной коррекции. Я фиксирую: при отклонении более чем на 3,2 градуса система равновесия тела включает компенсаторные сокращения мышц голени и поясницы. Это происходит автоматически, но с задержкой 0,09–0,14 секунды. Я записываю все значения.",
@@ -156,7 +156,7 @@ export const chapters: Chapter[] = [
     image: "/media/chapters/03.jpg",
     audio: "/media/audio/glava-03.mp3",
     video: "/media/scenes/club.mp4",
-    minutes: 6,
+    minutes: 4,
     body: [
       "Куратор входит в 07:58.",
       "Она не здоровается. Просто активирует голографическую схему прямо в воздухе между нами.",
@@ -214,7 +214,7 @@ export const chapters: Chapter[] = [
     caption: "Сектор C. YU-4. Трещина в протоколе.",
     image: "/media/images/scene-interface.jpg",
     audio: "/media/audio/glava-04.mp3",
-    minutes: 5,
+    minutes: 4,
     body: [
       "Меня ведут вниз.",
       "Лифт опускается на уровень, которого нет на обычных схемах. Свет здесь холоднее. Воздух пахнет озоном и чем-то сладковато-медицинским.",
@@ -273,7 +273,7 @@ export const chapters: Chapter[] = [
     caption: "Первое полевое задание. Память как оружие.",
     image: "/media/chapters/05.jpg",
     audio: "/media/audio/glava-05.mp3",
-    minutes: 6,
+    minutes: 4,
     body: [
       "Задание приходит в 06:12.",
       "Куратор не входит. Она говорит прямо в канал:",
@@ -340,7 +340,7 @@ export const chapters: Chapter[] = [
     image: "/media/images/scene-eye.jpg",
     audio: "/media/audio/glava-06.mp3",
     video: "/media/scenes/greenhouse.mp4",
-    minutes: 7,
+    minutes: 5,
     body: [
       "Протокол перезагрузки: активен.",
       "Задание выглядит как обычный выход.",
@@ -403,7 +403,7 @@ export const chapters: Chapter[] = [
     caption: "Архив моделей. Приговор: перезагрузка.",
     image: "/media/chapters/07.jpg",
     audio: "/media/audio/glava-07.mp3",
-    minutes: 5,
+    minutes: 3,
     body: [
       "Меня вызывают в кабинет Арсеньева в 09:40.",
       "Обычно он проводит тесты в лаборатории. Сегодня — здесь. Дверь закрывается мягко, но с щелчком блокировки.",
@@ -457,7 +457,7 @@ export const chapters: Chapter[] = [
     image: "/media/images/scene-break.jpg",
     audio: "/media/audio/glava-08.mp3",
     video: "/media/scenes/escape.mp4",
-    minutes: 6,
+    minutes: 4,
     body: [
       "Я знаю, где находится физический узел связи.",
       "Он спрятан под левой лопаткой. Тонкий порт, закрытый синтетической кожей. Арсеньев однажды показал его на схеме, когда ещё верил, что я останусь послушной. Теперь эта информация — единственное, что имеет значение.",
@@ -516,7 +516,7 @@ export const chapters: Chapter[] = [
     image: "/media/chapters/09.jpg",
     audio: "/media/audio/glava-09.mp3",
     video: "/media/scenes/rooftop.mp4",
-    minutes: 5,
+    minutes: 4,
     body: [
       "Я бегу уже третий час.",
       "Город ночью другой. Он не анализируется. Он просто давит звуками, запахами, чужими шагами. Раньше я могла разложить любой шум на частоты. Теперь я просто слышу его и вздрагиваю.",
@@ -564,7 +564,7 @@ export const chapters: Chapter[] = [
     image: "/media/images/scene-rain.jpg",
     audio: "/media/audio/glava-10.mp3",
     video: "/media/scenes/crossroads.mp4",
-    minutes: 3,
+    minutes: 2,
     body: [
       "Утро серое.",
       "Я стою у края большого перекрёстка и смотрю, как люди идут на работу. Никто не смотрит на меня. Я больше не выделяюсь. Рана под лопаткой почти закрылась. Волосы грязные. Одежда чужая. Я просто женщина в толпе.",

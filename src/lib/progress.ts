@@ -1,4 +1,9 @@
-import { STORAGE_KEYS, chapters } from "@/data/chapters";
+import { STORAGE_KEYS, chapters, getChapter } from "@/data/chapters";
+
+function sanitizeIds(ids: number[]): number[] {
+  const valid = new Set(chapters.map((c) => c.id));
+  return [...new Set(ids.filter((n) => valid.has(n)))];
+}
 
 export function getReadIds(): number[] {
   if (typeof window === "undefined") return [];
@@ -7,7 +12,9 @@ export function getReadIds(): number[] {
     if (!raw) return [];
     const parsed = JSON.parse(raw) as unknown;
     if (!Array.isArray(parsed)) return [];
-    return parsed.filter((n): n is number => typeof n === "number");
+    return sanitizeIds(
+      parsed.filter((n): n is number => typeof n === "number" && Number.isFinite(n)),
+    );
   } catch {
     return [];
   }
@@ -15,6 +22,7 @@ export function getReadIds(): number[] {
 
 export function markRead(id: number) {
   if (typeof window === "undefined") return;
+  if (!getChapter(id)) return;
   const set = new Set(getReadIds());
   set.add(id);
   localStorage.setItem(STORAGE_KEYS.read, JSON.stringify([...set]));
@@ -22,8 +30,9 @@ export function markRead(id: number) {
 }
 
 export function getProgressPercent(): number {
+  if (chapters.length === 0) return 0;
   const n = getReadIds().length;
-  return Math.round((n / chapters.length) * 100);
+  return Math.min(100, Math.round((n / chapters.length) * 100));
 }
 
 export function getLastChapter(): number | null {
@@ -31,5 +40,6 @@ export function getLastChapter(): number | null {
   const v = localStorage.getItem(STORAGE_KEYS.last);
   if (!v) return null;
   const n = Number(v);
-  return Number.isFinite(n) ? n : null;
+  if (!Number.isFinite(n) || !getChapter(n)) return null;
+  return n;
 }
