@@ -10,43 +10,63 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ChapterIdRouteImport } from './routes/chapter.$id'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as ChIdRouteImport } from './routes/ch.$id'
+import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ChapterIdRoute = ChapterIdRouteImport.update({
-  id: '/chapter/$id',
-  path: '/chapter/$id',
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChIdRoute = ChIdRouteImport.update({
+  id: '/ch/$id',
+  path: '/ch/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
+  id: '/api/auth/$',
+  path: '/api/auth/$',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/chapter/$id': typeof ChapterIdRoute
+  '/login': typeof LoginRoute
+  '/ch/$id': typeof ChIdRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/chapter/$id': typeof ChapterIdRoute
+  '/login': typeof LoginRoute
+  '/ch/$id': typeof ChIdRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/chapter/$id': typeof ChapterIdRoute
+  '/login': typeof LoginRoute
+  '/ch/$id': typeof ChIdRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/chapter/$id'
+  fullPaths: '/' | '/login' | '/ch/$id' | '/api/auth/$'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/chapter/$id'
-  id: '__root__' | '/' | '/chapter/$id'
+  to: '/' | '/login' | '/ch/$id' | '/api/auth/$'
+  id: '__root__' | '/' | '/login' | '/ch/$id' | '/api/auth/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ChapterIdRoute: typeof ChapterIdRoute
+  LoginRoute: typeof LoginRoute
+  ChIdRoute: typeof ChIdRoute
+  ApiAuthSplatRoute: typeof ApiAuthSplatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -58,11 +78,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/chapter/$id': {
-      id: '/chapter/$id'
-      path: '/chapter/$id'
-      fullPath: '/chapter/$id'
-      preLoaderRoute: typeof ChapterIdRouteImport
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ch/$id': {
+      id: '/ch/$id'
+      path: '/ch/$id'
+      fullPath: '/ch/$id'
+      preLoaderRoute: typeof ChIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/auth/$': {
+      id: '/api/auth/$'
+      path: '/api/auth/$'
+      fullPath: '/api/auth/$'
+      preLoaderRoute: typeof ApiAuthSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -70,7 +104,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ChapterIdRoute: ChapterIdRoute,
+  LoginRoute: LoginRoute,
+  ChIdRoute: ChIdRoute,
+  ApiAuthSplatRoute: ApiAuthSplatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

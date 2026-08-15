@@ -1,110 +1,93 @@
 @import "tailwindcss";
-@import "tw-animate-css";
 
 @theme {
-  --color-bg: #07080c;
-  --color-bg-elevated: #0e1016;
-  --color-bg-subtle: #151821;
-  --color-surface: #12151d;
+  --color-bg: #0c0d10;
+  --color-surface: #16181d;
+  --color-raised: #1e2128;
   --color-fg: #f0ece4;
-  --color-fg-muted: #b4aea4;
-  --color-fg-subtle: #7a756c;
+  --color-muted: #b4aea4;
+  --color-line: #2e3238;
   --color-accent: #8bb8b0;
   --color-accent-dim: #3d5c58;
-  --color-accent-fg: #07080c;
-  --color-border: #1e2330;
-  --color-border-strong: #2a3142;
-  --color-danger: #c45c5c;
-  --color-rain: #a8b4c4;
-
-  --font-display: "Unbounded", "Segoe UI", system-ui, sans-serif;
-  --font-body: "Literata", "Georgia", "Times New Roman", serif;
-  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
-
-  --radius-sm: 0.5rem;
-  --radius-md: 0.75rem;
-  --radius-lg: 1rem;
-  --radius-xl: 1.25rem;
+  --color-blood: #8b3a3a;
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-prose: "Source Serif 4", "Georgia", "Times New Roman", serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
 }
 
 @layer base {
   html {
-    color-scheme: dark;
-    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-size-adjust: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
   }
-
   body {
     margin: 0;
     min-height: 100dvh;
+    font-family: var(--font-sans);
     background: var(--color-bg);
     color: var(--color-fg);
-    font-family: var(--font-body);
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
   }
-
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
-
-  ::selection {
-    background: color-mix(in oklab, var(--color-accent) 35%, transparent);
-    color: var(--color-fg);
-  }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  .book-prose p {
-    margin: 0 0 1.2em;
-    line-height: 1.72;
-    font-size: clamp(1.125rem, 1.05rem + 0.4vw, 1.25rem);
-    letter-spacing: 0.01em;
-    color: color-mix(in oklab, var(--color-fg) 96%, transparent);
-    text-wrap: pretty;
-  }
-
-  .book-prose p:last-child {
-    margin-bottom: 0;
-  }
-
-  .book-prose .dialog {
-    color: var(--color-rain);
-    font-style: italic;
-    padding-left: 0.75em;
-    border-left: 1px solid var(--color-border);
-  }
-
-  .book-prose .system {
-    font-family: var(--font-mono);
-    font-size: 0.9em;
-    line-height: 1.55;
-    color: var(--color-accent);
-    letter-spacing: 0.01em;
-    border-left: 2px solid color-mix(in oklab, var(--color-accent) 40%, transparent);
-    padding: 0.7em 0.9em;
-    margin: 1.4em 0;
-    background: var(--color-bg-subtle);
-  }
-
-  .noise-overlay {
-    pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  * {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+@keyframes pulse-bar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+
+.pulse-bar {
+  animation: pulse-bar 0.72s ease-in-out infinite;
+}
+
+.book-prose {
+  font-family: var(--font-prose);
+  font-size: 1.25rem;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--color-fg);
+}
+
+@media (min-width: 768px) {
+  .book-prose {
+    font-size: 1.3125rem;
+    line-height: 1.65;
+  }
+}
+
+.book-prose p {
+  margin: 0 0 1.15em;
+  text-wrap: pretty;
+}
+
+.book-prose p.dialog {
+  padding-left: 0.75em;
+  border-left: 1px solid var(--color-line);
+}
+
+.book-prose p.log {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
+  border-left: 1px solid var(--color-accent-dim);
+  padding: 0.7em 0.9em;
+  background: var(--color-raised);
+  margin: 1.3em 0;
 }
