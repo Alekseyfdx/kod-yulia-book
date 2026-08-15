@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>Код Юлия — Удар</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#07080a;--fg:#ece7dc;--muted:#9a9284;--line:#2a2722;--accent:#c4a574;--surface:#12110e}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg);font-family:IBM Plex Sans,system-ui,sans-serif}
+body{padding-bottom:88px}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:720px;margin:0 auto;padding:16px}
+header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(7,8,10,.92);backdrop-filter:blur(10px);z-index:10}
+.kicker{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin:0}
+h1,h2{font-family:Cormorant Garamond,Georgia,serif;font-weight:500;margin:.2em 0}
+video{width:100%;border-radius:10px;background:#000;border:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+@media(min-width:720px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.card{display:block;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface)}
+.card img{width:100%;height:110px;object-fit:cover;display:block}
+.card span{display:block;padding:8px 10px 10px}
+.card small{color:var(--muted);letter-spacing:.12em}
+.prose p,.prose blockquote{line-height:1.65;font-size:18px}
+.prose blockquote{margin:0;padding-left:12px;border-left:2px solid var(--accent);color:var(--accent);font-family:Cormorant Garamond,Georgia,serif;font-size:22px}
+.hero{margin:12px 0 8px;width:100%;border-radius:10px;border:1px solid var(--line)}
+audio{width:100%;margin:12px 0}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 14px;border:1px solid var(--line);border-radius:8px;color:var(--fg)}
+.btn.primary{border-color:var(--accent);color:var(--accent)}
+.end{margin:40px 0;text-align:center;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Издание · 4.0</p>
+  <a class="btn primary" href="https://github.com/Alekseyfdx/kod-yulia-book/releases/download/edition-4.0/kod-yulia.epub" download>EPUB</a>
+</header>
+<div class="wrap">
+  <p class="kicker">Короткий метр · Удар · 1:05</p>
+  <h1>Код Юлия</h1>
+  <p style="color:var(--muted);max-width:36rem">Алексей Коломиец. Сначала — удар. Потом десять глав. Продолжение следует…</p>
+  <video src="https://raw.githubusercontent.com/Alekseyfdx/kod-yulia-book/2b6c682/public/film/kod-yulia.mp4" poster="https://raw.githubusercontent.com/Alekseyfdx/kod-yulia-book/2b6c682/public/film/poster.jpg" controls playsinline preload="metadata"></video>
+  <p class="row">
+    <a class="btn primary" href="/ch/01.html">Слушать главу 1</a>
+    <a class="btn" href="https://github.com/Alekseyfdx/kod-yulia-book/releases/download/edition-4.0/kod-yulia.epub" download>Скачать EPUB</a>
+  </p>
+  <h2>Главы</h2>
+  <div class="grid">
+    <a class="card" href="/ch/01.html"><img src="https://raw.githubusercontent.com/Alekseyfdx/kod-yulia-book/2b6c682/public/book/images/ch-01.jpg" alt=""/><span><small>ГЛАВА 01</small>Пробуждение</span></a>
+    <a class="card" href="/ch/02.html"><img src="https://raw.githubusercontent.com/Alekseyfdx/kod-yulia-book/2b6c682/public/book/images/ch-02.jpg" alt=""/><span><small>ГЛАВА 02</small>Метка</span></a>
+    <a class="card" href="/ch/03.html"><img src="https://raw.githubusercontent.com/Alekseyfdx/kod-yulia-book/2b6c682/public/book/images/ch-03.jpg" alt=""/><span><small>ГЛАВА 03</small>Приманка</span></a>
+    <a class="card" href="/ch/04.html"><img src="https://raw.githubusercontent.com/Alekseyfdx/kod-yulia-book/2b6c682/public/book/images/ch-04.jpg" alt=""/><span><small>ГЛАВА 04</small>Трещина</span></a>
+    <a class="card" href="/ch/05.html"><img src="https://raw.githubusercontent.com/Alekseyfdx/kod-yulia-book/2b6c682/public/book/images/ch-05.jpg" alt=""/><span><small>ГЛАВА 05</small>Оружие</span></a>
+    <a class="card" href="/ch/06.html"><img src="https://raw.githubusercontent.com/Alekseyfdx/kod-yulia-book/2b6c682/public/book/images/ch-06.jpg" alt=""/><span><small>ГЛАВА 06</small>Двойник</span></a>
+    <a class="card" href="/ch/07.html"><img src="https://raw.githubusercontent.com/Alekseyfdx/kod-yulia-book/2b6c682/public/book/images/ch-07.jpg" alt=""/><span><small>ГЛАВА 07</small>Предательство</span></a>
+    <a class="card" href="/ch/08.html"><img src="https://raw.githubusercontent.com/Alekseyfdx/kod-yulia-book/2b6c682/public/book/images/ch-08.jpg" alt=""/><span><small>ГЛАВА 08</small>Разрыв</span></a>
+    <a class="card" href="/ch/09.html"><img src="https://raw.githubusercontent.com/Alekseyfdx/kod-yulia-book/2b6c682/public/book/images/ch-09.jpg" alt=""/><span><small>ГЛАВА 09</small>Охота</span></a>
+    <a class="card" href="/ch/10.html"><img src="https://raw.githubusercontent.com/Alekseyfdx/kod-yulia-book/2b6c682/public/book/images/ch-10.jpg" alt=""/><span><small>ГЛАВА 10</small>Человек</span></a>
+  </div>
+  <p class="end">Продолжение следует…</p>
+  <p style="text-align:center"><a class="btn primary" href="https://github.com/Alekseyfdx/kod-yulia-book/releases/download/edition-4.0/kod-yulia.epub" download>Скачать книгу · EPUB</a></p>
+</div>
+</body>
+</html>
