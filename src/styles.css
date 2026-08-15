@@ -6,11 +6,11 @@
   --color-bg-elevated: #0e1016;
   --color-bg-subtle: #151821;
   --color-surface: #12151d;
-  --color-fg: #e8eaef;
-  --color-fg-muted: #9aa3b2;
-  --color-fg-subtle: #6b7384;
-  --color-accent: #7ec8d4;
-  --color-accent-dim: #3d7a86;
+  --color-fg: #f0ece4;
+  --color-fg-muted: #b4aea4;
+  --color-fg-subtle: #7a756c;
+  --color-accent: #8bb8b0;
+  --color-accent-dim: #3d5c58;
   --color-accent-fg: #07080c;
   --color-border: #1e2330;
   --color-border-strong: #2a3142;
@@ -31,6 +31,7 @@
   html {
     color-scheme: dark;
     scroll-behavior: smooth;
+    text-size-adjust: 100%;
   }
 
   body {
@@ -60,10 +61,12 @@
   }
 
   .book-prose p {
-    margin: 0 0 1.15em;
+    margin: 0 0 1.2em;
     line-height: 1.72;
-    font-size: clamp(1.05rem, 0.98rem + 0.35vw, 1.18rem);
-    color: color-mix(in oklab, var(--color-fg) 94%, transparent);
+    font-size: clamp(1.125rem, 1.05rem + 0.4vw, 1.25rem);
+    letter-spacing: 0.01em;
+    color: color-mix(in oklab, var(--color-fg) 96%, transparent);
+    text-wrap: pretty;
   }
 
   .book-prose p:last-child {
@@ -73,16 +76,20 @@
   .book-prose .dialog {
     color: var(--color-rain);
     font-style: italic;
+    padding-left: 0.75em;
+    border-left: 1px solid var(--color-border);
   }
 
   .book-prose .system {
     font-family: var(--font-mono);
-    font-size: 0.88em;
+    font-size: 0.9em;
+    line-height: 1.55;
     color: var(--color-accent);
     letter-spacing: 0.01em;
     border-left: 2px solid color-mix(in oklab, var(--color-accent) 40%, transparent);
-    padding-left: 0.9em;
+    padding: 0.7em 0.9em;
     margin: 1.4em 0;
+    background: var(--color-bg-subtle);
   }
 
   .noise-overlay {
