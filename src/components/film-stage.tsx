@@ -1,6 +1,7 @@
 import { Pause, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { BOOK, FILM_BEATS, fmtTime } from "@/data/book";
+import { asset } from "../lib/asset";
 
 export function FilmStage() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -160,7 +161,7 @@ export function FilmStage() {
               }
             >
               <img
-                src={`/film/stills/${c.id}.jpg`}
+                src={asset(`/film/stills/${c.id}.jpg`)}
                 alt=""
                 className="h-14 w-20 shrink-0 object-cover"
               />

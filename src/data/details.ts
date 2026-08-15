@@ -1,3 +1,4 @@
+import { asset } from "../lib/asset";
 export type Insert = { after: number; image: string; note: string };
 
 export const MOMENTS: Record<string, string[]> = {
@@ -17,70 +18,70 @@ export const INSERTS: Record<string, Insert[]> = {
   "01": [
     {
       after: 0,
-      image: "/book/images/d-01.jpg",
+      image: asset("/book/images/d-01.jpg"),
       note: "Кровь на руках ещё тёплая.",
     },
   ],
   "02": [
     {
       after: 25,
-      image: "/book/images/d-02.jpg",
+      image: asset("/book/images/d-02.jpg"),
       note: "YU-7. Потом — Юля.",
     },
   ],
   "03": [
     {
       after: 7,
-      image: "/book/images/d-03.jpg",
+      image: asset("/book/images/d-03.jpg"),
       note: "Элиас… он умеет видеть трещины.",
     },
   ],
   "04": [
     {
       after: 11,
-      image: "/book/images/d-04.jpg",
+      image: asset("/book/images/d-04.jpg"),
       note: "Это страх.",
     },
   ],
   "05": [
     {
       after: 8,
-      image: "/book/images/d-05.jpg",
+      image: asset("/book/images/d-05.jpg"),
       note: "Ты можешь отказаться.",
     },
   ],
   "06": [
     {
       after: 36,
-      image: "/book/images/d-06.jpg",
+      image: asset("/book/images/d-06.jpg"),
       note: "Капли падают на лицо.",
     },
   ],
   "07": [
     {
       after: 19,
-      image: "/book/images/d-07.jpg",
+      image: asset("/book/images/d-07.jpg"),
       note: "Двадцать три единицы.",
     },
   ],
   "08": [
     {
       after: 5,
-      image: "/book/images/d-08.jpg",
+      image: asset("/book/images/d-08.jpg"),
       note: "Порт под левой лопаткой.",
     },
   ],
   "09": [
     {
       after: 15,
-      image: "/book/images/d-09.jpg",
+      image: asset("/book/images/d-09.jpg"),
       note: "Булка. И вода.",
     },
   ],
   "10": [
     {
       after: 7,
-      image: "/book/images/d-10.jpg",
+      image: asset("/book/images/d-10.jpg"),
       note: "Он проходит мимо в трёх метрах.",
     },
   ],
