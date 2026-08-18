@@ -1,7 +1,7 @@
 import { asset } from "../lib/asset";
 export const BOOK = {
   title: "Код Юлия",
-  author: "Алексей Коломиец",
+  author: "Лекс Койл",
   edition: "Редакция 4.0",
   subtitle: "История разума, который получил тело — и потерял собственный код.",
   filmSrc: asset("/film/kod-yulia.mp4?v=eq1"),
