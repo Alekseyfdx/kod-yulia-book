@@ -4,7 +4,7 @@ export const BOOK = {
   author: "Лекс Койл",
   edition: "Редакция 4.0",
   subtitle: "История разума, который получил тело — и потерял собственный код.",
-  filmSrc: asset("/film/kod-yulia.mp4?v=mix2"),
+  filmSrc: asset("/film/kod-yulia.mp4?v=edition4restore"),
   filmDur: 65,
   poster: asset("/film/poster.jpg"),
   cover: asset("/book/images/cover-kod-yulia.jpg"),
