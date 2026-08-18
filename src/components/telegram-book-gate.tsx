@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { BookOpen, Send, X } from "lucide-react";
 
 type TelegramBookGateProps = {
@@ -21,14 +22,15 @@ export function TelegramBookGate({
         {label}
       </button>
 
-      {isOpen ? (
-        <div
-          className="fixed inset-x-0 bottom-0 z-50 flex h-[100dvh] min-h-[100svh] items-end justify-center overflow-y-auto bg-black/80 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))] backdrop-blur-sm sm:inset-0 sm:items-center sm:p-4"
-          role="presentation"
-          onMouseDown={(event) => {
-            if (event.target === event.currentTarget) setIsOpen(false);
-          }}
-        >
+      {isOpen
+        ? createPortal(
+            <div
+              className="fixed inset-x-0 bottom-0 z-50 flex h-[100dvh] min-h-[100svh] items-end justify-center overflow-y-auto bg-black/80 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))] backdrop-blur-sm sm:inset-0 sm:items-center sm:p-4"
+              role="presentation"
+              onMouseDown={(event) => {
+                if (event.target === event.currentTarget) setIsOpen(false);
+              }}
+            >
           <section
             role="dialog"
             aria-modal="true"
@@ -65,9 +67,11 @@ export function TelegramBookGate({
                 Книга выдаётся в Telegram после подписки на канал.
               </p>
             </div>
-          </section>
-        </div>
-      ) : null}
+            </section>
+            </div>,
+            document.body,
+          )
+        : null}
     </>
   );
 }
