@@ -14,7 +14,7 @@ function Edition() {
 
       <section id="film" className="mx-auto max-w-6xl scroll-mt-16 px-4 py-4 md:scroll-mt-20 md:px-8 md:py-6">
         <p className="font-display text-xs tracking-[0.32em] text-accent uppercase">
-          Короткий метр · Удар · 1:05
+          Короткий метр · Код Юлия · 1:05
         </p>
         <h2 className="mt-1 font-display text-2xl font-medium text-balance md:mt-2 md:text-4xl">
           Сначала — удар

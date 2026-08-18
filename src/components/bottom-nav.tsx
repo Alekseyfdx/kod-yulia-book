@@ -22,7 +22,7 @@ export function BottomNav({ nextId }: { nextId?: string }) {
             }
           >
             <Clapperboard className="h-5 w-5" />
-            Удар
+            Фильм
           </a>
         </li>
         <li>

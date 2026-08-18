@@ -58,7 +58,7 @@ export function TelegramBookGate({
                     Забрать мультимедийную книгу
                   </h2>
                   <p className="mt-3 text-sm leading-relaxed text-muted">
-                    В Telegram выдаётся единый комплект: EPUB-книга, фильм «Удар», десять аудиоглав,
+                    В Telegram выдаётся единый комплект: EPUB-книга, фильм «Код Юлия», десять аудиоглав,
                     саундтрек и дополнительные видеосцены.
                   </p>
                   <a
