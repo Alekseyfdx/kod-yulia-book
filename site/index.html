@@ -51,7 +51,7 @@ audio{width:100%;margin:12px 0}
 <body>
 <header>
   <p class="kicker">Издание · 4.0</p>
-  <button class="btn primary" type="button" data-epub-gate>EPUB</button>
+  <a class="btn primary" href="https://t.me/neuralbookk">Книга в Telegram</a>
 </header>
 <div class="wrap">
   <p class="kicker">Короткий метр · Удар · 1:05</p>
@@ -60,7 +60,7 @@ audio{width:100%;margin:12px 0}
   <video src="/film/kod-yulia.mp4" poster="/film/poster.jpg" controls playsinline preload="metadata"></video>
   <p class="row">
     <a class="btn primary" href="/ch/01.html">Слушать главу 1</a>
-    <button class="btn" type="button" data-epub-gate>Скачать EPUB</button>
+    <a class="btn" href="https://t.me/neuralbookk">Забрать книгу в Telegram</a>
   </p>
   <h2>Главы</h2>
   <div class="grid">
@@ -76,51 +76,9 @@ audio{width:100%;margin:12px 0}
     <a class="card" href="/ch/10.html"><img src="/book/images/ch-10.jpg" alt=""/><span><small>ГЛАВА 10</small>Человек</span></a>
   </div>
   <p class="end">Продолжение следует…</p>
-  <p style="text-align:center"><button class="btn primary" type="button" data-epub-gate>Скачать книгу · EPUB</button></p>
+  <p style="text-align:center"><a class="btn primary" href="https://t.me/neuralbookk">Подписаться и забрать книгу</a></p>
 </div>
 
-<div class="modal-backdrop" id="epub-modal" hidden>
-  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="epub-modal-title">
-    <div class="modal-head"><small>Издание 4.0</small><button class="modal-close" type="button" data-close-epub aria-label="Закрыть окно">×</button></div>
-    <div class="modal-body">
-      <h2 id="epub-modal-title">Скачать полную книгу</h2>
-      <p>Оставьте email, чтобы получить файл и узнать о продолжении.</p>
-      <form class="modal-form" id="epub-form">
-        <label for="epub-email">Ваш email</label>
-        <input id="epub-email" type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required/>
-        <button class="btn primary" type="submit">Получить EPUB</button>
-      </form>
-      <p class="success" id="epub-success" hidden role="status">Книга скачивается. Приятного чтения!</p>
-      <a class="btn telegram" href="https://t.me/neuralbookk">Читать в Telegram</a>
-    </div>
-  </section>
-</div>
-<script>
-(() => {
-  const modal = document.getElementById("epub-modal");
-  const form = document.getElementById("epub-form");
-  const success = document.getElementById("epub-success");
-  const open = () => { success.hidden = true; form.hidden = false; modal.hidden = false; document.getElementById("epub-email").focus(); };
-  const close = () => { modal.hidden = true; };
-  document.querySelectorAll("[data-epub-gate]").forEach((button) => button.addEventListener("click", open));
-  document.querySelectorAll("[data-close-epub]").forEach((button) => button.addEventListener("click", close));
-  modal.addEventListener("click", (event) => { if (event.target === modal) close(); });
-  document.addEventListener("keydown", (event) => { if (event.key === "Escape" && !modal.hidden) close(); });
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const email = new FormData(form).get("email").toString().trim().toLowerCase();
-    if (!email) return;
-    try { localStorage.setItem("kod-yulia:epub-email", email); } catch (_) {}
-    const download = document.createElement("a");
-    download.href = "/book/kod-yulia.epub";
-    download.download = "kod-yulia.epub";
-    document.body.appendChild(download);
-    download.click();
-    download.remove();
-    form.hidden = true;
-    success.hidden = false;
-  });
-})();
-</script>
+
 </body>
 </html>

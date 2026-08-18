@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { EpubDownloadGate } from "@/components/epub-download-gate";
+import { TelegramBookGate } from "@/components/telegram-book-gate";
 
 export function SiteHeader({ active }: { active?: "film" | "book" }) {
   return (
@@ -27,8 +27,8 @@ export function SiteHeader({ active }: { active?: "film" | "book" }) {
             Саундтрек
           </a>
         </nav>
-        <EpubDownloadGate
-          label="EPUB"
+        <TelegramBookGate
+          label="Книга"
           className="flex min-h-10 items-center justify-center gap-1.5 rounded-sm border border-accent px-3 font-display text-xs tracking-[0.16em] text-accent uppercase transition-colors hover:bg-raised focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         />
       </div>
